@@ -13,6 +13,13 @@ Start the dev server,
 ```bash
 $ yarn start
 ```
+#我的运行环境
+```
+node v12.19.0
+npm 6.14.8
+umi umi@3.2.27
+macOS Catalina 10.15.4
+```
 
 #问题
 ```
