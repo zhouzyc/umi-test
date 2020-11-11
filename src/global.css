@@ -1,0 +1,12 @@
+/*我是全局样式配置*/
+html,
+body,
+#root {
+  height: 100%;
+}
+.ant-layout{
+  min-height: 100vh;
+}
+.ant-layout-content{
+  /*min-height: 100vh;*/
+}
