@@ -51,7 +51,7 @@
     "@types/redux-logger": "^3.0.8",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
-    "@umijs/preset-dumi": "1.1.0-rc.0",
+    "@umijs/preset-dumi": "1.1.0-rc.1",
     "@umijs/test": "^3.2.24",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
