@@ -2,13 +2,14 @@ import { resolve } from 'path';
 import { defineConfig } from 'umi';
 import proxy from './proxy';
 import { routes } from './route';
+
 export default defineConfig({
   /**
    * https://umijs.org/zh-CN/docs/fast-refresh
    * 快速刷新（Fast Refresh）
    * 开发环境下，可以保持组件状态，同时编辑提供即时反馈。
    */
-  // fastRefresh: {},
+  fastRefresh: {},
   /**
    * Umi 默认编译 node_modules 下的文件，带来一些收益的同时，也增加了额外的编译时间。
    * 如果不希望 node_modules 下的文件走 babel 编译，可通过以下配置减少 40% 到 60% 的编译时间。
