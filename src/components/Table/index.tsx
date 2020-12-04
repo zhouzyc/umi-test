@@ -131,11 +131,11 @@ function Table<T>(props: TableType.Props<T>) {
   return (
     <>
       <ProTable<T>
-        form={form}
+        // form={form}
         loading={loading}
         dataSource={dataSource}
         pagination={pagination || undefined}
-        actionRef={tableRef}
+        // actionRef={tableRef}
         formRef={formRef}
         rowSelection={needRowSelection ? {} : undefined}
         columns={_columns}

@@ -1,9 +1,15 @@
-import { resolve } from "path";
+import { resolve } from 'path';
 import { defineConfig } from 'umi';
 import proxy from './proxy';
 import { routes } from './route';
 
 export default defineConfig({
+  /**
+   * https://umijs.org/zh-CN/docs/fast-refresh
+   * 快速刷新（Fast Refresh）
+   * 开发环境下，可以保持组件状态，同时编辑提供即时反馈。
+   */
+  fastRefresh: {},
   /**
    * Umi 默认编译 node_modules 下的文件，带来一些收益的同时，也增加了额外的编译时间。
    * 如果不希望 node_modules 下的文件走 babel 编译，可通过以下配置减少 40% 到 60% 的编译时间。
@@ -12,30 +18,30 @@ export default defineConfig({
     type: 'none',
   },
   targets: {
-    ie:10
+    ie: 10,
   },
   // title: '',
   base: '/',
   // 为所有非三方脚本加上 crossorigin="anonymous" 属性，通常用于统计脚本错误。
   crossorigin: false,
   //开启 TypeScript 编译时类型检查
-  forkTSChecker:{},
+  forkTSChecker: {},
   //hash配置是否让生成的文件包含 hash 后缀，通常用于增量发布和避免浏览器加载缓存
-  hash:true,
+  hash: true,
   //生成map文件
   devtool: 'source-map',
-  devServer:{
-    host:"127.0.0.1",
+  devServer: {
+    host: '127.0.0.1',
     // port:8038,
-    https:false,
+    https: false,
   },
   // 代理配置(跨域处理)
   proxy: proxy,
   //路由 不配置 默认为约定式路由
-  routes:routes,
+  routes: routes,
   // 别名配置
   alias: {
-    "@": resolve(__dirname, "./src"),
+    '@': resolve(__dirname, './src'),
   },
   //配置 <head> 里的额外脚本，数组项为字符串或对象。
   // headScripts:[],
@@ -50,9 +56,7 @@ export default defineConfig({
   // externals: {
   // },
   // 配置 <body> 里的额外脚本。。
-  scripts:[
-    'https://g.alicdn.com/dingding/dinglogin/0.0.5/ddLogin.js'
-  ],
+  scripts: ['https://g.alicdn.com/dingding/dinglogin/0.0.5/ddLogin.js'],
   /**
    * 配置额外 CSS。
    * styles: [
@@ -73,7 +77,7 @@ export default defineConfig({
   //theme:{}
   //targets
   //配置图片文件是否走 base64 编译的阈值。默认是 10000 字节，少于他会被编译为 base64 编码，否则会生成单独的文件
-  inlineLimit:10000,
+  inlineLimit: 10000,
   //配置额外的 umi 插件。
   // plugins:[],
 
@@ -121,14 +125,14 @@ export default defineConfig({
   // 是否启用按需加载，即是否把构建产物进行拆分，在需要的时候下载额外的 JS 再执行
   dynamicImport: {
     // 无需 level, webpackChunkName 引入 tsx时候看看 tsconfig.json配置了相关配置没
-    loading: '@/pages/loading',//指向 loading 组件文件
+    loading: '@/pages/loading', //指向 loading 组件文件
   },
   //配置 html 的输出形式，常用来解决没有服务端情况下，页面的 SEO 和首屏渲染提速
   // exportStatic:{}
   //启动ssr渲染
   // ssr: {},
   // //配置即可拥有 Ant Design 的 Layout
-  layout:{
+  layout: {
     name: '***系统',
     locale: false,
     navTheme: 'light',
